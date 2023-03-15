@@ -2940,11 +2940,11 @@ var _aboutMe = require("./components/AboutMe");
 var _aboutMeDefault = parcelHelpers.interopDefault(_aboutMe);
 var _resume = require("./components/Resume");
 var _resumeDefault = parcelHelpers.interopDefault(_resume);
-(0, _client.createRoot)(app).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
+(0, _client.createRoot)(app).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
     children: [
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 19,
+            lineNumber: 16,
             columnNumber: 5
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2954,12 +2954,12 @@ var _resumeDefault = parcelHelpers.interopDefault(_resume);
                     className: "col-span-12 lg:col-span-4",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileCardDefault.default), {}, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 22,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/index.js",
-                    lineNumber: 21,
+                    lineNumber: 18,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2967,7 +2967,7 @@ var _resumeDefault = parcelHelpers.interopDefault(_resume);
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _routeNavigationDefault.default), {}, void 0, false, {
                             fileName: "src/index.js",
-                            lineNumber: 25,
+                            lineNumber: 22,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2981,7 +2981,7 @@ var _resumeDefault = parcelHelpers.interopDefault(_resume);
                                         }, void 0, false, void 0, void 0)
                                     }, void 0, false, {
                                         fileName: "src/index.js",
-                                        lineNumber: 28,
+                                        lineNumber: 25,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -2989,46 +2989,46 @@ var _resumeDefault = parcelHelpers.interopDefault(_resume);
                                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resumeDefault.default), {}, void 0, false, void 0, void 0)
                                     }, void 0, false, {
                                         fileName: "src/index.js",
-                                        lineNumber: 29,
+                                        lineNumber: 26,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                                         path: "projects",
                                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            children: "projects"
+                                            children: "Work In Progress"
                                         }, void 0, false, void 0, void 0)
                                     }, void 0, false, {
                                         fileName: "src/index.js",
-                                        lineNumber: 30,
+                                        lineNumber: 27,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/index.js",
-                                lineNumber: 27,
+                                lineNumber: 24,
                                 columnNumber: 11
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/index.js",
-                            lineNumber: 26,
+                            lineNumber: 23,
                             columnNumber: 9
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/index.js",
-                    lineNumber: 24,
+                    lineNumber: 21,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/index.js",
-            lineNumber: 20,
+            lineNumber: 17,
             columnNumber: 5
         }, undefined)
     ]
 }, void 0, true, {
     fileName: "src/index.js",
-    lineNumber: 18,
+    lineNumber: 15,
     columnNumber: 3
 }, undefined));
 
