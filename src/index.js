@@ -3,11 +3,8 @@ import Navbar from './components/Navbar';
 import ProfileCard from './components/ProfileCard';
 import RouteNavigation from './components/RouteNavigation';
 import {
-  createBrowserRouter,
-  RouterProvider,
   Routes,
-  Link,
-  BrowserRouter,
+  HashRouter,
   Route
 } from "react-router-dom";
 import Container from './components/Container'
@@ -15,7 +12,7 @@ import AboutMe from './components/AboutMe';
 import Resume from './components/Resume';
 
 createRoot(app).render(
-  <BrowserRouter>
+  <HashRouter>
     <Navbar />
     <div className='grid grid-cols-12 mt-5 lg:mt-10 pb-10 lg:pb-0 max-w-[96rem] mx-auto space-y-4'>
       <div className='col-span-12 lg:col-span-4'>
@@ -32,5 +29,5 @@ createRoot(app).render(
         </div>
       </div>
     </div>
-  </BrowserRouter>
+  </HashRouter>
 );
