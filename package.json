@@ -8,7 +8,7 @@
     "main": false
   },
   "scripts": {
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build --public-url ./ ./src/index.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "parcel ./src/index.html"
