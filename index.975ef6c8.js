@@ -27234,24 +27234,107 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _barsIcon = require("../../icons/BarsIcon");
+var _barsIconDefault = parcelHelpers.interopDefault(_barsIcon);
+var _s = $RefreshSig$();
 function Navbar() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-screen bg-transparent h-20 border-b-[1px] border-b-blue-300 p-2 flex justify-center lg:justify-between items-center",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            src: require("94276ad4e38e332b"),
-            alt: "",
-            className: "h-20"
-        }, void 0, false, {
-            fileName: "src/components/Navbar/index.js",
-            lineNumber: 6,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/Navbar/index.js",
-        lineNumber: 5,
-        columnNumber: 9
-    }, this);
+    _s();
+    const [isVisible, setisVisible] = (0, _react.useState)(false);
+    const handleMobileMenu = ()=>{
+        setisVisible(!isVisible);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-screen bg-transparent h-20 border-b-blue-300 p-2 flex justify-between items-center shadow-lg",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: require("94276ad4e38e332b"),
+                        alt: "",
+                        className: "h-20"
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar/index.js",
+                        lineNumber: 15,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "lg:hidden h-6 w-6 mr-0 fill-blue-900 cursor-pointer",
+                        onClick: handleMobileMenu,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _barsIconDefault.default), {}, void 0, false, {
+                            fileName: "src/components/Navbar/index.js",
+                            lineNumber: 17,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar/index.js",
+                        lineNumber: 16,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Navbar/index.js",
+                lineNumber: 14,
+                columnNumber: 13
+            }, this),
+            isVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "h-30 bg-blue-300 bg-opacity-90 flex flex-col items-center lg:hidden divide-y-[1px] divide-zinc-500 justify-center shadow-md absolute w-full z-20",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "h-10 text-slate-100 font-light text-xl hover:text-white w-full",
+                            children: "About Me"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar/index.js",
+                            lineNumber: 23,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar/index.js",
+                        lineNumber: 22,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/resume",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "h-10 text-slate-100 font-light text-xl hover:text-white w-full",
+                            children: "Resume"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar/index.js",
+                            lineNumber: 28,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar/index.js",
+                        lineNumber: 27,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/projects",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "h-10 text-slate-100 font-light text-xl hover:text-white w-full",
+                            children: "Projects"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar/index.js",
+                            lineNumber: 33,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar/index.js",
+                        lineNumber: 32,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Navbar/index.js",
+                lineNumber: 21,
+                columnNumber: 17
+            }, this)
+        ]
+    }, void 0, true);
 }
+_s(Navbar, "nK/uWgZ5mfKEug37Rw1KXq8XaoQ=");
 _c = Navbar;
 exports.default = Navbar;
 var _c;
@@ -27262,7 +27345,7 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","94276ad4e38e332b":"cDdyF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cDdyF":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","94276ad4e38e332b":"cDdyF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../icons/BarsIcon":"gQAdB","react-router-dom":"9xmpe"}],"cDdyF":[function(require,module,exports) {
 module.exports = require("28a2f9783dbec641").getBundleURL("bLxZJ") + "logo.4bcd4013.svg" + "?" + Date.now();
 
 },{"28a2f9783dbec641":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -27462,11 +27545,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"56025e18b7810a30":"786KC"}],"5LqEG":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$36a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"56025e18b7810a30":"786KC"}],"gQAdB":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d074 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$36a8.prelude(module);
+$parcel$ReactRefreshHelpers$d074.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27474,694 +27557,34 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _cardIcon = require("../../icons/CardIcon");
-var _cardIconDefault = parcelHelpers.interopDefault(_cardIcon);
-var _instagramIcon = require("../../icons/InstagramIcon");
-var _instagramIconDefault = parcelHelpers.interopDefault(_instagramIcon);
-var _linkedinIcon = require("../../icons/LinkedinIcon");
-var _linkedinIconDefault = parcelHelpers.interopDefault(_linkedinIcon);
-var _locationIcon = require("../../icons/LocationIcon");
-var _locationIconDefault = parcelHelpers.interopDefault(_locationIcon);
-var _mailIcon = require("../../icons/MailIcon");
-var _mailIconDefault = parcelHelpers.interopDefault(_mailIcon);
-var _mediumIcon = require("../../icons/MediumIcon");
-var _mediumIconDefault = parcelHelpers.interopDefault(_mediumIcon);
-var _phoneIcon = require("../../icons/PhoneIcon");
-var _phoneIconDefault = parcelHelpers.interopDefault(_phoneIcon);
-function ProfileCard() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "h-auto w-full flex justify-center lg:ml-5 rounded-xl",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "bg-blue-900 rounded-3xl lg:h-64 h-48 absolute z-10 shadow-2xl",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: require("505315ad3871caed"),
-                    className: "rounded-3xl h-full"
-                }, void 0, false, {
-                    fileName: "src/components/ProfileCard/index.js",
-                    lineNumber: 14,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/ProfileCard/index.js",
-                lineNumber: 13,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "bg-blue-200 rounded-xl w-[90%] lg:mt-44 mt-36 lg:pt-24 pt-16 text-center",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-3xl",
-                        children: "Matteo Santoro"
-                    }, void 0, false, {
-                        fileName: "src/components/ProfileCard/index.js",
-                        lineNumber: 17,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "font-light",
-                        children: "Web Developer Full Stack"
-                    }, void 0, false, {
-                        fileName: "src/components/ProfileCard/index.js",
-                        lineNumber: 18,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex space-x-4 w-full justify-center p-2 h-10 rounded-b-xl",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "h-6 w-6 fill-blue-500 cursor-pointer",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _instagramIconDefault.default), {}, void 0, false, {
-                                    fileName: "src/components/ProfileCard/index.js",
-                                    lineNumber: 21,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/components/ProfileCard/index.js",
-                                lineNumber: 20,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "h-6 w-6 fill-blue-500 cursor-pointer",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mediumIconDefault.default), {}, void 0, false, {
-                                    fileName: "src/components/ProfileCard/index.js",
-                                    lineNumber: 24,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/components/ProfileCard/index.js",
-                                lineNumber: 23,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "h-6 w-6 fill-blue-500 cursor-pointer",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _linkedinIconDefault.default), {}, void 0, false, {
-                                    fileName: "src/components/ProfileCard/index.js",
-                                    lineNumber: 27,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/components/ProfileCard/index.js",
-                                lineNumber: 26,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ProfileCard/index.js",
-                        lineNumber: 19,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "p-7 mt-5 bg-blue-300 h-auto rounded-b-xl",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A] ",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500 object-center",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phoneIconDefault.default), {}, void 0, false, {
-                                            fileName: "src/components/ProfileCard/index.js",
-                                            lineNumber: 33,
-                                            columnNumber: 29
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 32,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-left ml-2.5",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-xs text-slate-900",
-                                                children: "Phone"
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 36,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-slate-600 break-all",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                    className: "hover:text-slate-800 duration-300 transition",
-                                                    href: "tel:+393337360501",
-                                                    children: "+39 3337360501"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/ProfileCard/index.js",
-                                                    lineNumber: 37,
-                                                    columnNumber: 69
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 37,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 35,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ProfileCard/index.js",
-                                lineNumber: 31,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mailIconDefault.default), {}, void 0, false, {
-                                            fileName: "src/components/ProfileCard/index.js",
-                                            lineNumber: 42,
-                                            columnNumber: 29
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 41,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-left ml-2.5",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-xs text-slate-900",
-                                                children: "Email"
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 45,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-slate-600 break-all",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                    className: "hover:text-slate-800 duration-300 transition",
-                                                    href: "mailto:m.santoro1997@gmail.com",
-                                                    children: "m.santoro1997@gmail.com"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/ProfileCard/index.js",
-                                                    lineNumber: 46,
-                                                    columnNumber: 69
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 46,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 44,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ProfileCard/index.js",
-                                lineNumber: 40,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _locationIconDefault.default), {}, void 0, false, {
-                                            fileName: "src/components/ProfileCard/index.js",
-                                            lineNumber: 51,
-                                            columnNumber: 29
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 50,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-left ml-2.5",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-xs text-slate-900",
-                                                children: "Location"
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 54,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-slate-600 break-all",
-                                                children: "San Vito Dei Normanni (BR)"
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 55,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 53,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ProfileCard/index.js",
-                                lineNumber: 49,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardIconDefault.default), {}, void 0, false, {
-                                            fileName: "src/components/ProfileCard/index.js",
-                                            lineNumber: 60,
-                                            columnNumber: 29
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 59,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-left ml-2.5",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-xs text-slate-900",
-                                                children: "VAT Number"
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 63,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-slate-600 break-all",
-                                                children: "02709520742"
-                                            }, void 0, false, {
-                                                fileName: "src/components/ProfileCard/index.js",
-                                                lineNumber: 64,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/ProfileCard/index.js",
-                                        lineNumber: 62,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ProfileCard/index.js",
-                                lineNumber: 58,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ProfileCard/index.js",
-                        lineNumber: 30,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ProfileCard/index.js",
-                lineNumber: 16,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/ProfileCard/index.js",
-        lineNumber: 12,
-        columnNumber: 9
-    }, this);
-}
-_c = ProfileCard;
-exports.default = ProfileCard;
-var _c;
-$RefreshReg$(_c, "ProfileCard");
-
-  $parcel$ReactRefreshHelpers$36a8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../icons/InstagramIcon":"8gjv8","../../icons/LinkedinIcon":"esblv","../../icons/LocationIcon":"bIi0q","../../icons/MailIcon":"cXJOq","../../icons/MediumIcon":"16FB2","../../icons/PhoneIcon":"ijs0K","505315ad3871caed":"2JPOn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../icons/CardIcon":"5lUbg"}],"8gjv8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$319b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$319b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function InstagramIcon() {
+function BarsIcon() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 448 512",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-            d: "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+            d: "M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
         }, void 0, false, {
-            fileName: "src/icons/InstagramIcon.jsx",
+            fileName: "src/icons/BarsIcon.jsx",
             lineNumber: 5,
             columnNumber: 67
         }, this)
     }, void 0, false, {
-        fileName: "src/icons/InstagramIcon.jsx",
+        fileName: "src/icons/BarsIcon.jsx",
         lineNumber: 5,
         columnNumber: 5
     }, this);
 }
-_c = InstagramIcon;
-exports.default = InstagramIcon;
+exports.default = BarsIcon;
+_c = BarsIcon;
 var _c;
-$RefreshReg$(_c, "InstagramIcon");
+$RefreshReg$(_c, "BarsIcon");
 
-  $parcel$ReactRefreshHelpers$319b.postlude(module);
+  $parcel$ReactRefreshHelpers$d074.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"esblv":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5cb6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5cb6.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function LinkedinIcon() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 448 512",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-            d: "M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-        }, void 0, false, {
-            fileName: "src/icons/LinkedinIcon.jsx",
-            lineNumber: 5,
-            columnNumber: 67
-        }, this)
-    }, void 0, false, {
-        fileName: "src/icons/LinkedinIcon.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
-exports.default = LinkedinIcon;
-_c = LinkedinIcon;
-var _c;
-$RefreshReg$(_c, "LinkedinIcon");
-
-  $parcel$ReactRefreshHelpers$5cb6.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bIi0q":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bce0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bce0.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function LocationIcon() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 384 512",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-            d: "M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
-        }, void 0, false, {
-            fileName: "src/icons/LocationIcon.jsx",
-            lineNumber: 5,
-            columnNumber: 71
-        }, this)
-    }, void 0, false, {
-        fileName: "src/icons/LocationIcon.jsx",
-        lineNumber: 5,
-        columnNumber: 9
-    }, this);
-}
-exports.default = LocationIcon;
-_c = LocationIcon;
-var _c;
-$RefreshReg$(_c, "LocationIcon");
-
-  $parcel$ReactRefreshHelpers$bce0.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cXJOq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$eec3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$eec3.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function MailIcon() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 512 512",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-            d: "M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-        }, void 0, false, {
-            fileName: "src/icons/MailIcon.jsx",
-            lineNumber: 5,
-            columnNumber: 67
-        }, this)
-    }, void 0, false, {
-        fileName: "src/icons/MailIcon.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
-exports.default = MailIcon;
-_c = MailIcon;
-var _c;
-$RefreshReg$(_c, "MailIcon");
-
-  $parcel$ReactRefreshHelpers$eec3.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"16FB2":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4dca = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4dca.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function MediumIcon() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 640 512",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-            d: "M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"
-        }, void 0, false, {
-            fileName: "src/icons/MediumIcon.jsx",
-            lineNumber: 5,
-            columnNumber: 67
-        }, this)
-    }, void 0, false, {
-        fileName: "src/icons/MediumIcon.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
-_c = MediumIcon;
-exports.default = MediumIcon;
-var _c;
-$RefreshReg$(_c, "MediumIcon");
-
-  $parcel$ReactRefreshHelpers$4dca.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ijs0K":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$720b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$720b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function PhoneIcon() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 448 512",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-            d: "M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z"
-        }, void 0, false, {
-            fileName: "src/icons/PhoneIcon.jsx",
-            lineNumber: 5,
-            columnNumber: 67
-        }, this)
-    }, void 0, false, {
-        fileName: "src/icons/PhoneIcon.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
-exports.default = PhoneIcon;
-_c = PhoneIcon;
-var _c;
-$RefreshReg$(_c, "PhoneIcon");
-
-  $parcel$ReactRefreshHelpers$720b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2JPOn":[function(require,module,exports) {
-module.exports = require("4b50b83ffe1231f4").getBundleURL("bLxZJ") + "profile.6ee28169.jpg" + "?" + Date.now();
-
-},{"4b50b83ffe1231f4":"lgJ39"}],"5lUbg":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6a95 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6a95.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function CardIcon() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 576 512",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-            d: "M256 0h64c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H256c-17.7 0-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM64 64H192v48c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V64H512c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64zM176 437.3c0 5.9 4.8 10.7 10.7 10.7H389.3c5.9 0 10.7-4.8 10.7-10.7c0-29.5-23.9-53.3-53.3-53.3H229.3c-29.5 0-53.3 23.9-53.3 53.3zM288 352a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"
-        }, void 0, false, {
-            fileName: "src/icons/CardIcon.jsx",
-            lineNumber: 5,
-            columnNumber: 67
-        }, this)
-    }, void 0, false, {
-        fileName: "src/icons/CardIcon.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
-exports.default = CardIcon;
-_c = CardIcon;
-var _c;
-$RefreshReg$(_c, "CardIcon");
-
-  $parcel$ReactRefreshHelpers$6a95.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3tEMW":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7a4a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7a4a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-function RouteNavigation() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "hidden lg:flex bg-slate-200 p-2 w-1/2 justify-center bg-opacity-50 rounded-md",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                to: "/",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    type: "button",
-                    className: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-light rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2",
-                    children: "About Me"
-                }, void 0, false, {
-                    fileName: "src/components/RouteNavigation/index.js",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/RouteNavigation/index.js",
-                lineNumber: 7,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                to: "/resume",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    type: "button",
-                    className: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-light rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2",
-                    children: "Resume"
-                }, void 0, false, {
-                    fileName: "src/components/RouteNavigation/index.js",
-                    lineNumber: 11,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/RouteNavigation/index.js",
-                lineNumber: 10,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                to: "/projects",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    type: "button",
-                    className: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-light rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2",
-                    children: "Projects"
-                }, void 0, false, {
-                    fileName: "src/components/RouteNavigation/index.js",
-                    lineNumber: 14,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/RouteNavigation/index.js",
-                lineNumber: 13,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RouteNavigation/index.js",
-        lineNumber: 6,
-        columnNumber: 9
-    }, this);
-}
-exports.default = RouteNavigation;
-_c = RouteNavigation;
-var _c;
-$RefreshReg$(_c, "RouteNavigation");
-
-  $parcel$ReactRefreshHelpers$7a4a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.9.0
  *
@@ -33306,7 +32729,706 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 } //#endregion
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ayXg4":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5LqEG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$36a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$36a8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _cardIcon = require("../../icons/CardIcon");
+var _cardIconDefault = parcelHelpers.interopDefault(_cardIcon);
+var _instagramIcon = require("../../icons/InstagramIcon");
+var _instagramIconDefault = parcelHelpers.interopDefault(_instagramIcon);
+var _linkedinIcon = require("../../icons/LinkedinIcon");
+var _linkedinIconDefault = parcelHelpers.interopDefault(_linkedinIcon);
+var _locationIcon = require("../../icons/LocationIcon");
+var _locationIconDefault = parcelHelpers.interopDefault(_locationIcon);
+var _mailIcon = require("../../icons/MailIcon");
+var _mailIconDefault = parcelHelpers.interopDefault(_mailIcon);
+var _mediumIcon = require("../../icons/MediumIcon");
+var _mediumIconDefault = parcelHelpers.interopDefault(_mediumIcon);
+var _phoneIcon = require("../../icons/PhoneIcon");
+var _phoneIconDefault = parcelHelpers.interopDefault(_phoneIcon);
+function ProfileCard() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "h-auto w-full flex justify-center lg:ml-5 rounded-xl",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-blue-900 rounded-3xl lg:h-64 h-48 absolute z-10 shadow-2xl",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: require("505315ad3871caed"),
+                    className: "rounded-3xl h-full"
+                }, void 0, false, {
+                    fileName: "src/components/ProfileCard/index.js",
+                    lineNumber: 14,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/ProfileCard/index.js",
+                lineNumber: 13,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-blue-200 rounded-xl w-[90%] lg:mt-44 mt-36 lg:pt-24 pt-16 text-center",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-3xl",
+                        children: "Matteo Santoro"
+                    }, void 0, false, {
+                        fileName: "src/components/ProfileCard/index.js",
+                        lineNumber: 17,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "font-light",
+                        children: "Web Developer Full Stack"
+                    }, void 0, false, {
+                        fileName: "src/components/ProfileCard/index.js",
+                        lineNumber: 18,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex space-x-4 w-full justify-center p-2 h-10 rounded-b-xl",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "h-6 w-6 fill-blue-500 cursor-pointer",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _instagramIconDefault.default), {}, void 0, false, {
+                                    fileName: "src/components/ProfileCard/index.js",
+                                    lineNumber: 21,
+                                    columnNumber: 25
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/components/ProfileCard/index.js",
+                                lineNumber: 20,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "h-6 w-6 fill-blue-500 cursor-pointer",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mediumIconDefault.default), {}, void 0, false, {
+                                    fileName: "src/components/ProfileCard/index.js",
+                                    lineNumber: 24,
+                                    columnNumber: 25
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/components/ProfileCard/index.js",
+                                lineNumber: 23,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "h-6 w-6 fill-blue-500 cursor-pointer",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _linkedinIconDefault.default), {}, void 0, false, {
+                                    fileName: "src/components/ProfileCard/index.js",
+                                    lineNumber: 27,
+                                    columnNumber: 25
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/components/ProfileCard/index.js",
+                                lineNumber: 26,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ProfileCard/index.js",
+                        lineNumber: 19,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "p-7 mt-5 bg-blue-300 h-auto rounded-b-xl",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A] ",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500 object-center",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phoneIconDefault.default), {}, void 0, false, {
+                                            fileName: "src/components/ProfileCard/index.js",
+                                            lineNumber: 33,
+                                            columnNumber: 29
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 32,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "text-left ml-2.5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-xs text-slate-900",
+                                                children: "Phone"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 36,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-slate-600 break-all",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                    className: "hover:text-slate-800 duration-300 transition",
+                                                    href: "tel:+393337360501",
+                                                    children: "+39 3337360501"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/ProfileCard/index.js",
+                                                    lineNumber: 37,
+                                                    columnNumber: 69
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 37,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 35,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/ProfileCard/index.js",
+                                lineNumber: 31,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mailIconDefault.default), {}, void 0, false, {
+                                            fileName: "src/components/ProfileCard/index.js",
+                                            lineNumber: 42,
+                                            columnNumber: 29
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 41,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "text-left ml-2.5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-xs text-slate-900",
+                                                children: "Email"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 45,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-slate-600 break-all",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                    className: "hover:text-slate-800 duration-300 transition",
+                                                    href: "mailto:m.santoro1997@gmail.com",
+                                                    children: "m.santoro1997@gmail.com"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/ProfileCard/index.js",
+                                                    lineNumber: 46,
+                                                    columnNumber: 69
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 46,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 44,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/ProfileCard/index.js",
+                                lineNumber: 40,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _locationIconDefault.default), {}, void 0, false, {
+                                            fileName: "src/components/ProfileCard/index.js",
+                                            lineNumber: 51,
+                                            columnNumber: 29
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 50,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "text-left ml-2.5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-xs text-slate-900",
+                                                children: "Location"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 54,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-slate-600 break-all",
+                                                children: "San Vito Dei Normanni (BR)"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 55,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 53,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/ProfileCard/index.js",
+                                lineNumber: 49,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "flex-shrink-0 h-6 w-6 fill-blue-500",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardIconDefault.default), {}, void 0, false, {
+                                            fileName: "src/components/ProfileCard/index.js",
+                                            lineNumber: 60,
+                                            columnNumber: 29
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 59,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "text-left ml-2.5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-xs text-slate-900",
+                                                children: "VAT Number"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 63,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-slate-600 break-all",
+                                                children: "02709520742"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ProfileCard/index.js",
+                                                lineNumber: 64,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/ProfileCard/index.js",
+                                        lineNumber: 62,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/ProfileCard/index.js",
+                                lineNumber: 58,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ProfileCard/index.js",
+                        lineNumber: 30,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ProfileCard/index.js",
+                lineNumber: 16,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ProfileCard/index.js",
+        lineNumber: 12,
+        columnNumber: 9
+    }, this);
+}
+_c = ProfileCard;
+exports.default = ProfileCard;
+var _c;
+$RefreshReg$(_c, "ProfileCard");
+
+  $parcel$ReactRefreshHelpers$36a8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../icons/InstagramIcon":"8gjv8","../../icons/LinkedinIcon":"esblv","../../icons/LocationIcon":"bIi0q","../../icons/MailIcon":"cXJOq","../../icons/MediumIcon":"16FB2","../../icons/PhoneIcon":"ijs0K","505315ad3871caed":"2JPOn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../icons/CardIcon":"5lUbg"}],"8gjv8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$319b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$319b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function InstagramIcon() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 448 512",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+        }, void 0, false, {
+            fileName: "src/icons/InstagramIcon.jsx",
+            lineNumber: 5,
+            columnNumber: 67
+        }, this)
+    }, void 0, false, {
+        fileName: "src/icons/InstagramIcon.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = InstagramIcon;
+exports.default = InstagramIcon;
+var _c;
+$RefreshReg$(_c, "InstagramIcon");
+
+  $parcel$ReactRefreshHelpers$319b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"esblv":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5cb6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5cb6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function LinkedinIcon() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 448 512",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+        }, void 0, false, {
+            fileName: "src/icons/LinkedinIcon.jsx",
+            lineNumber: 5,
+            columnNumber: 67
+        }, this)
+    }, void 0, false, {
+        fileName: "src/icons/LinkedinIcon.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+exports.default = LinkedinIcon;
+_c = LinkedinIcon;
+var _c;
+$RefreshReg$(_c, "LinkedinIcon");
+
+  $parcel$ReactRefreshHelpers$5cb6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bIi0q":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bce0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bce0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function LocationIcon() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 384 512",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+        }, void 0, false, {
+            fileName: "src/icons/LocationIcon.jsx",
+            lineNumber: 5,
+            columnNumber: 71
+        }, this)
+    }, void 0, false, {
+        fileName: "src/icons/LocationIcon.jsx",
+        lineNumber: 5,
+        columnNumber: 9
+    }, this);
+}
+exports.default = LocationIcon;
+_c = LocationIcon;
+var _c;
+$RefreshReg$(_c, "LocationIcon");
+
+  $parcel$ReactRefreshHelpers$bce0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cXJOq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$eec3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$eec3.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function MailIcon() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 512 512",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+        }, void 0, false, {
+            fileName: "src/icons/MailIcon.jsx",
+            lineNumber: 5,
+            columnNumber: 67
+        }, this)
+    }, void 0, false, {
+        fileName: "src/icons/MailIcon.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+exports.default = MailIcon;
+_c = MailIcon;
+var _c;
+$RefreshReg$(_c, "MailIcon");
+
+  $parcel$ReactRefreshHelpers$eec3.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"16FB2":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4dca = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4dca.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function MediumIcon() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 640 512",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"
+        }, void 0, false, {
+            fileName: "src/icons/MediumIcon.jsx",
+            lineNumber: 5,
+            columnNumber: 67
+        }, this)
+    }, void 0, false, {
+        fileName: "src/icons/MediumIcon.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = MediumIcon;
+exports.default = MediumIcon;
+var _c;
+$RefreshReg$(_c, "MediumIcon");
+
+  $parcel$ReactRefreshHelpers$4dca.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ijs0K":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$720b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$720b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function PhoneIcon() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 448 512",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z"
+        }, void 0, false, {
+            fileName: "src/icons/PhoneIcon.jsx",
+            lineNumber: 5,
+            columnNumber: 67
+        }, this)
+    }, void 0, false, {
+        fileName: "src/icons/PhoneIcon.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+exports.default = PhoneIcon;
+_c = PhoneIcon;
+var _c;
+$RefreshReg$(_c, "PhoneIcon");
+
+  $parcel$ReactRefreshHelpers$720b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2JPOn":[function(require,module,exports) {
+module.exports = require("4b50b83ffe1231f4").getBundleURL("bLxZJ") + "profile.6ee28169.jpg" + "?" + Date.now();
+
+},{"4b50b83ffe1231f4":"lgJ39"}],"5lUbg":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6a95 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6a95.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function CardIcon() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 576 512",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M256 0h64c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H256c-17.7 0-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM64 64H192v48c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V64H512c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64zM176 437.3c0 5.9 4.8 10.7 10.7 10.7H389.3c5.9 0 10.7-4.8 10.7-10.7c0-29.5-23.9-53.3-53.3-53.3H229.3c-29.5 0-53.3 23.9-53.3 53.3zM288 352a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"
+        }, void 0, false, {
+            fileName: "src/icons/CardIcon.jsx",
+            lineNumber: 5,
+            columnNumber: 67
+        }, this)
+    }, void 0, false, {
+        fileName: "src/icons/CardIcon.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+exports.default = CardIcon;
+_c = CardIcon;
+var _c;
+$RefreshReg$(_c, "CardIcon");
+
+  $parcel$ReactRefreshHelpers$6a95.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3tEMW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7a4a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7a4a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+function RouteNavigation() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "hidden lg:flex bg-slate-200 p-2 w-1/2 justify-center bg-opacity-50 rounded-md",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "/",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    type: "button",
+                    className: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-light rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2",
+                    children: "About Me"
+                }, void 0, false, {
+                    fileName: "src/components/RouteNavigation/index.js",
+                    lineNumber: 8,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/RouteNavigation/index.js",
+                lineNumber: 7,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "/resume",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    type: "button",
+                    className: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-light rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2",
+                    children: "Resume"
+                }, void 0, false, {
+                    fileName: "src/components/RouteNavigation/index.js",
+                    lineNumber: 11,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/RouteNavigation/index.js",
+                lineNumber: 10,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "/projects",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    type: "button",
+                    className: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-light rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2",
+                    children: "Projects"
+                }, void 0, false, {
+                    fileName: "src/components/RouteNavigation/index.js",
+                    lineNumber: 14,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/RouteNavigation/index.js",
+                lineNumber: 13,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RouteNavigation/index.js",
+        lineNumber: 6,
+        columnNumber: 9
+    }, this);
+}
+exports.default = RouteNavigation;
+_c = RouteNavigation;
+var _c;
+$RefreshReg$(_c, "RouteNavigation");
+
+  $parcel$ReactRefreshHelpers$7a4a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ayXg4":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3a2b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33349,7 +33471,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 function AboutMe() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "text-md lg:text-lg font-light text-slate-900 h-[40rem]",
+        className: "text-md lg:text-lg font-light text-slate-900 h-[40rem] overflow-y-auto",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
             children: 'I am a computer science enthusiast who has been passionate about this field since the age of seven. I started my studies at ITT G. Giorgi, obtaining three CISCO certifications. At the end of five years of school, I passed the entrance test for the Poggiolevante Merit Institute in Bari where I studied Computer Science at the University of Bari Aldo Moro. I also took several courses at the institute, such as Android, C++, Java and PHP. I obtained a soft skills certification and learned how to work in a team. I also had the opportunity to work on a project for an IT company in Bisceglie, "Bisceglie Approdi." After two years of college, I started working as a junior developer at "Fincons Group" and obtained the AWS Developer Associate certificate. In September 2019 I moved to "YOOX-Net-A-Porter Group" as a developer, working on custom CMS built with React, Jquery and AWS technologies. In 2021 I started a new career as a Full Stack Developer at "Shopfully | Doveconviene.it". There I worked for an internal platform for the marketing team, which had the focus on custom campaigns integrated through google adv apis, using react, aws and php. After this adventure, I worked for 8 months as a senior software engineer for "Valassis Italia" in an international team and then started my own freelancer business, also launching a startup in the artificial intelligence sector and offering consulting services to companies.'
         }, void 0, false, {
@@ -33469,8 +33591,8 @@ var _utils = require("./shared/utils");
 _pdf.GlobalWorkerOptions.workerSrc = "pdf.worker.js";
 
 },{"pdfjs-dist/build/pdf":"5JCjp","./Document":"8CbgZ","./Outline":"3l2G2","./Page":"jZD5Y","./shared/utils":"a1B2d","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5JCjp":[function(require,module,exports) {
-var Buffer = require("465d4be042de2506").Buffer;
 var process = require("71b354f32b84e858");
+var Buffer = require("465d4be042de2506").Buffer;
 /**
  * @licstart The following is the entire license notice for the
  * JavaScript code in this page
