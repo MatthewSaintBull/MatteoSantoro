@@ -27251,8 +27251,9 @@ function Navbar() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         src: require("94276ad4e38e332b"),
-                        alt: "",
-                        className: "h-20"
+                        alt: "website logo",
+                        height: "80px",
+                        width: "258px"
                     }, void 0, false, {
                         fileName: "src/components/Navbar/index.js",
                         lineNumber: 15,
@@ -32763,7 +32764,10 @@ function ProfileCard() {
                 className: "bg-blue-900 rounded-3xl lg:h-64 h-48 absolute z-10 shadow-2xl",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: require("505315ad3871caed"),
-                    className: "rounded-3xl h-full"
+                    className: "rounded-3xl h-full",
+                    height: "100%",
+                    width: "100%",
+                    alt: "profile picture"
                 }, void 0, false, {
                     fileName: "src/components/ProfileCard/index.js",
                     lineNumber: 14,
