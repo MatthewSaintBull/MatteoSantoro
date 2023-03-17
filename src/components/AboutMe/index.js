@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutMe() {
     return (
-        <div className='text-md lg:text-lg font-light text-slate-900 h-[40rem]'>
+        <div className='text-md lg:text-lg font-light text-slate-900 h-[40rem] overflow-y-auto'>
             <p>I am a computer science enthusiast who has been passionate about this field since the age of seven. I started my studies at ITT G. Giorgi, obtaining three CISCO
                 certifications. At the end of five years of school, I passed the entrance test for the Poggiolevante Merit Institute in Bari where I studied Computer Science
                 at the University of Bari Aldo Moro. I also took several courses at the institute, such as Android, C++, Java and PHP. I obtained a soft skills certification

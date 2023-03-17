@@ -11,7 +11,7 @@ function ProfileCard() {
     return (
         <div className='h-auto w-full flex justify-center lg:ml-5 rounded-xl'>
             <div className='bg-blue-900 rounded-3xl lg:h-64 h-48 absolute z-10 shadow-2xl'>
-                <img src={require('../../assets/profile.jpg')} className='rounded-3xl h-full' />
+                <img src={require('../../assets/profile.jpg')} className='rounded-3xl h-full' height={'100%'} width={'100%'} alt='profile picture' />
             </div>
             <div className='bg-blue-200 rounded-xl w-[90%] lg:mt-44 mt-36 lg:pt-24 pt-16 text-center'>
                 <h1 className='text-3xl'>Matteo Santoro</h1>
