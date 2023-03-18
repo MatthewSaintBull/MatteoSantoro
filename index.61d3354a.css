@@ -340,18 +340,6 @@ img, video {
   width: 100vw;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
-.w-52 {
-  width: 13rem;
-}
-
 .max-w-\[96rem\] {
   max-width: 96rem;
 }

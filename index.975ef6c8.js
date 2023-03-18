@@ -32765,8 +32765,6 @@ function ProfileCard() {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: require("505315ad3871caed"),
                     className: "rounded-3xl h-full",
-                    height: "100%",
-                    width: "100%",
                     alt: "profile picture"
                 }, void 0, false, {
                     fileName: "src/components/ProfileCard/index.js",
