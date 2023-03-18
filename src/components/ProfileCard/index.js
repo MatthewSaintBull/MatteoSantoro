@@ -43,7 +43,7 @@ function ProfileCard() {
                         </span>
                         <div className="text-left ml-2.5">
                             <p className="text-xs text-slate-900">Email</p>
-                            <p className="text-slate-600 break-all"><a className="hover:text-slate-800 duration-300 transition" href="mailto:m.santoro1997@gmail.com">m.santoro1997@gmail.com</a></p>
+                            <p className="text-slate-600 break-all"><a className="hover:text-slate-800 duration-300 transition" href="mailto:admin@msantoro.com">admin@msantoro.com</a></p>
                         </div>
                     </div>
                     <div className="flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]">
