@@ -10,6 +10,7 @@ import {
 import Container from './components/Container'
 import AboutMe from './components/AboutMe';
 import Resume from './components/Resume';
+import Projects from './components/Projects';
 
 createRoot(app).render(
   <HashRouter>
@@ -24,7 +25,7 @@ createRoot(app).render(
           <Routes>
             <Route index element={<Container><AboutMe /></Container>} />
             <Route path='resume' element={<Resume />} />
-            <Route path='projects' element={<div>Work In Progress</div>} />
+            <Route path='projects' element={<Projects />} />
           </Routes>
         </div>
       </div>
