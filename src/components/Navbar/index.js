@@ -1,13 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import BarsIcon from '../../icons/BarsIcon'
 
 function Navbar() {
     const [isVisible, setisVisible] = useState(false)
+    const mobileMenuRef = useRef(null)
 
-    const handleMobileMenu = () => {
+    const handleMobileMenu = (event) => {
+        event.stopPropagation()
         setisVisible(!isVisible)
     }
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+                setisVisible(false)
+            }
+        }
+        window.addEventListener('click', handleClickOutside)
+        return () => {
+            window.removeEventListener('click', handleClickOutside)
+        }
+    }, [])
 
     return (
         <>
@@ -17,26 +31,26 @@ function Navbar() {
                     <BarsIcon />
                 </div>
             </div>
-            {isVisible &&
-                <div className='h-30 bg-blue-300 bg-opacity-90 flex flex-col items-center lg:hidden divide-y-[1px] divide-zinc-500 justify-center shadow-md absolute w-full z-20'>
-                    <Link to={'/'}>
-                        <button className='h-10 text-slate-100 font-light text-xl hover:text-white w-full'>
-                            About Me
-                        </button>
-                    </Link>
-                    <Link to={'/resume'}>
-                        <button className='h-10 text-slate-100 font-light text-xl hover:text-white w-full'>
-                            Resume
-                        </button>
-                    </Link>
-                    <Link to={'/projects'}>
-                        <button className='h-10 text-slate-100 font-light text-xl hover:text-white w-full'>
-                            Projects
-                        </button>
-                    </Link>
-
-                </div>
-            }
+            <div ref={mobileMenuRef} className={`h-30 bg-blue-300 bg-opacity-90 flex flex-col items-center lg:hidden divide-y-[1px] divide-zinc-500 justify-center shadow-md absolute w-full z-20 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}
+                 onAnimationEnd={() => { if (!isVisible) mobileMenuRef.current.style.display = 'none'; }}
+                 style={{ display: isVisible ? 'flex' : 'none' }}
+            >
+                <Link to={'/'}>
+                    <button className='h-10 text-slate-100 font-light text-xl hover:text-white w-full'>
+                        About Me
+                    </button>
+                </Link>
+                <Link to={'/resume'}>
+                    <button className='h-10 text-slate-100 font-light text-xl hover:text-white w-full'>
+                        Resume
+                    </button>
+                </Link>
+                <Link to={'/projects'}>
+                    <button className='h-10 text-slate-100 font-light text-xl hover:text-white w-full'>
+                        Projects
+                    </button>
+                </Link>
+            </div>
         </>
     )
 }

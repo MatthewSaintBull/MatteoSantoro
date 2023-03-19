@@ -18,17 +18,17 @@ function ProfileCard() {
                 <p className='font-light'>Web Developer Full Stack</p>
                 <div className='flex space-x-4 w-full justify-center p-2 h-10 rounded-b-xl'>
                     <div className='h-6 w-6 fill-blue-500 cursor-pointer'>
-                        <a href="https://www.instagram.com/matteo_santoro_97/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/matteo_santoro_97/" target="_blank" rel="noopener noreferrer" aria-label="Segui Matteo Santoro su Instagram">
                             <InstagramIcon className='h-6 w-6 fill-blue-500 cursor-pointer' />
                         </a>
                     </div>
                     <div className='h-6 w-6 fill-blue-500 cursor-pointer'>
-                        <a href="https://medium.com/@mttdev1997" target="_blank" rel="noopener noreferrer">
+                        <a href="https://medium.com/@mttdev1997" target="_blank" rel="noopener noreferrer" aria-label="Leggi gli articoli di Matteo Santoro su Medium">
                             <MediumIcon className='h-6 w-6 fill-blue-500 cursor-pointer' />
                         </a>
                     </div>
                     <div className='h-6 w-6 fill-blue-500 cursor-pointer'>
-                        <a href="https://www.linkedin.com/in/matteo-santoro/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/matteo-santoro/" target="_blank" rel="noopener noreferrer" aria-label="Visualizza il profilo di Matteo Santoro su LinkedIn">
                             <LinkedinIcon className='h-6 w-6 fill-blue-500 cursor-pointer' />
                         </a>
                     </div>
@@ -40,7 +40,7 @@ function ProfileCard() {
                         </span>
                         <div className="text-left ml-2.5">
                             <p className="text-xs text-slate-900">Phone</p>
-                            <p className="text-slate-600 break-all"><a className="hover:text-slate-800 duration-300 transition" href="tel:+393337360501">+39 3337360501</a></p>
+                            <p className="text-slate-800 break-all"><a className="hover:text-slate-800 duration-300 transition" href="tel:+393337360501">+39 3337360501</a></p>
                         </div>
                     </div>
                     <div className="flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]">
@@ -49,7 +49,7 @@ function ProfileCard() {
                         </span>
                         <div className="text-left ml-2.5">
                             <p className="text-xs text-slate-900">Email</p>
-                            <p className="text-slate-600 break-all"><a className="hover:text-slate-800 duration-300 transition" href="mailto:admin@msantoro.com">admin@msantoro.com</a></p>
+                            <p className="text-slate-800 break-all"><a className="hover:text-slate-800 duration-300 transition" href="mailto:admin@msantoro.com">admin@msantoro.com</a></p>
                         </div>
                     </div>
                     <div className="flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]">
@@ -58,7 +58,7 @@ function ProfileCard() {
                         </span>
                         <div className="text-left ml-2.5">
                             <p className="text-xs text-slate-900">Location</p>
-                            <p className="text-slate-600 break-all">San Vito Dei Normanni (BR)</p>
+                            <p className="text-slate-800 break-all">San Vito Dei Normanni (BR)</p>
                         </div>
                     </div>
                     <div className="flex py-2.5 border-b border-[#E3E3E3] dark:border-[#3D3A3A]">
@@ -67,7 +67,7 @@ function ProfileCard() {
                         </span>
                         <div className="text-left ml-2.5">
                             <p className="text-xs text-slate-900">VAT Number</p>
-                            <p className="text-slate-600 break-all">02709520742</p>
+                            <p className="text-slate-800 break-all">02709520742</p>
                         </div>
                     </div>
                 </div>
