@@ -18,13 +18,19 @@ function ProfileCard() {
                 <p className='font-light'>Web Developer Full Stack</p>
                 <div className='flex space-x-4 w-full justify-center p-2 h-10 rounded-b-xl'>
                     <div className='h-6 w-6 fill-blue-500 cursor-pointer'>
-                        <InstagramIcon />
+                        <a href="https://www.instagram.com/matteo_santoro_97/" target="_blank" rel="noopener noreferrer">
+                            <InstagramIcon className='h-6 w-6 fill-blue-500 cursor-pointer' />
+                        </a>
                     </div>
                     <div className='h-6 w-6 fill-blue-500 cursor-pointer'>
-                        <MediumIcon />
+                        <a href="https://medium.com/@mttdev1997" target="_blank" rel="noopener noreferrer">
+                            <MediumIcon className='h-6 w-6 fill-blue-500 cursor-pointer' />
+                        </a>
                     </div>
                     <div className='h-6 w-6 fill-blue-500 cursor-pointer'>
-                        <LinkedinIcon />
+                        <a href="https://www.linkedin.com/in/matteo-santoro/" target="_blank" rel="noopener noreferrer">
+                            <LinkedinIcon className='h-6 w-6 fill-blue-500 cursor-pointer' />
+                        </a>
                     </div>
                 </div>
                 <div className="p-7 mt-5 bg-blue-300 h-auto rounded-b-xl">
