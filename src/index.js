@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 createRoot(app).render(
   <>
     <nav className="bg-pastel-blue h-20 overflow-hidden justify-center flex shadow-xl fixed w-screen">
-      <img src={require('./assets/logo.webp')} alt="website logo" className='h-20 mix-blend-multiply' />
+      <img src={require('./assets/Logo.webp')} alt="website logo" className='h-20 mix-blend-multiply' />
     </nav>
 
     <div className="min-h-screen bg-gray-200 max-w-7xl mx-auto pt-20">
