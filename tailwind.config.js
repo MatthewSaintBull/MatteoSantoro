@@ -19,6 +19,9 @@ module.exports = {
           to: { opacity: 0 },
         },
       },
+      colors: {
+        'pastel-blue' : '#A7C7E7'
+      }
     },
   },
   plugins: [],
