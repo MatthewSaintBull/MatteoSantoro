@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "parcel build --public-url ./ ./src/index.html",
+    "build:analyze" : "parcel build --public-url ./ ./src/index.html --reporter @parcel/reporter-bundle-analyzer",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "parcel ./src/index.html"
@@ -17,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/reporter-bundle-analyzer": "^2.8.3",
     "buffer": "^5.7.1",
     "gh-pages": "^5.0.0",
     "parcel": "^2.8.3",
