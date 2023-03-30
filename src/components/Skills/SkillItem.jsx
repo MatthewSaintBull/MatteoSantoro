@@ -23,7 +23,7 @@ const SkillItem = ({ title, description }) => {
                     </motion.p>
                 )}
             </AnimatePresence>
-            <button className="w-full h-10 flex justify-center -mb-5 mt-5 border-t-[1px] border-gray-600 py-2" onClick={() => expand()} ref={expandRef}>
+            <button aria-label='Espandi descrizione' className="w-full h-10 flex justify-center -mb-5 mt-5 border-t-[1px] border-gray-600 py-2" onClick={() => expand()} ref={expandRef}>
                 <i className={`fa-solid ${isExpanded ? 'fa-angle-up' : 'fa-angle-down'} text-gray-900 text-3xl`}></i>
             </button>
         </div>
