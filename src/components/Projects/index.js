@@ -47,7 +47,7 @@ function ProjectsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {
                         projects.map(project => {
-                            return <ProjectItem image={project.image} alt={project.alt} title={project.title} />
+                            return <ProjectItem image={project.image} alt={project.alt} title={project.title} href={project.href} />
                         })
                     }
                 </div>
