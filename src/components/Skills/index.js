@@ -68,7 +68,9 @@ function SkillsSection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-gray-900">
                 {
                     skills.map(skill => {
-                        return <SkillItem title={skill.title} description={skill.description} />
+                        return <div className="flex flex-col">
+                            <SkillItem title={skill.title} description={skill.description} />
+                        </div>
                     })
                 }
             </div>
