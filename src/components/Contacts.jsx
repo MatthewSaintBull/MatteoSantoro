@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ContactsSection = () => {
     return (
-        <motion.div 
+        <motion.div
             className='container mx-auto'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -33,9 +33,9 @@ const ContactsSection = () => {
 
                     <div className="mb-8">
                         <h3 className="text-xl font-bold text-blue-800 mb-3">Curriculum</h3>
-                        <a 
-                            href={require('../assets/CV.pdf')} 
-                            target="_blank" 
+                        <a
+                            href={require('../assets/CV.pdf')}
+                            target="_blank"
                             className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
                         >
                             <i className="fas fa-file-pdf text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
@@ -47,10 +47,10 @@ const ContactsSection = () => {
                         <h3 className="text-xl font-bold text-blue-800 mb-3">Social</h3>
                         <ul className="grid grid-cols-2 gap-4">
                             <li>
-                                <a 
-                                    href="https://github.com/MatthewSaintbull" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+                                <a
+                                    href="https://github.com/MatthewSaintbull"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
                                 >
                                     <i className="fab fa-github text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
@@ -58,10 +58,10 @@ const ContactsSection = () => {
                                 </a>
                             </li>
                             <li>
-                                <a 
-                                    href="https://www.linkedin.com/in/matteo-santoro/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+                                <a
+                                    href="https://www.linkedin.com/in/matteo-santoro/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
                                 >
                                     <i className="fab fa-linkedin text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
@@ -69,10 +69,10 @@ const ContactsSection = () => {
                                 </a>
                             </li>
                             <li>
-                                <a 
-                                    href="https://www.instagram.com/matteo_santoro_97/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+                                <a
+                                    href="https://www.instagram.com/matteo_santoro_97/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
                                 >
                                     <i className="fab fa-instagram text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
@@ -80,10 +80,10 @@ const ContactsSection = () => {
                                 </a>
                             </li>
                             <li>
-                                <a 
-                                    href="https://medium.com/@mttdev1997" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+                                <a
+                                    href="https://medium.com/@mttdev1997"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
                                 >
                                     <i className="fab fa-medium text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
@@ -96,12 +96,8 @@ const ContactsSection = () => {
 
                 {/* Right side: Contact Form */}
                 <div className="w-full md:w-3/5 bg-white p-6 rounded-lg shadow-lg overflow-hidden">
-                    <div className="relative w-full h-full min-h-[500px]">
-                        <iframe 
-                            src="https://www.formilio.com/form/cm83eelnx0001ih0312ctsvpd" 
-                            className="absolute inset-0 w-full h-full border-0" 
-                            title="Contact Form"
-                        ></iframe>
+                    <div className="relative w-full h-full min-h-[650px]">
+                        <iframe src="https://www.formilio.com/form/cm83eelnx0001ih0312ctsvpd" width="100%" height="680px" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
