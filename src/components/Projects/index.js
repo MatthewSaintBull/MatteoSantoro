@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 function ProjectsSection() {
     const projects = [
         {
+            href: 'https://prismaservices.it',
+            image: `${require('../../assets/prismaservices-preview.webp')}`,
+            alt: 'Anteprima prismaservices.it',
+            title: 'Co-Founder | Prismaservices.it (Owner)'
+        },
+        {
+            href: 'https://formilio.com',
+            image: `${require('../../assets/formilio-preview.webp')}`,
+            alt: 'Anteprima formilio.com',
+            title: 'Owner | Formilio.com (Owner)'
+        },
+        {
             href: 'https://www.yoox.com',
             image: `${require('../../assets/yoox-preview.webp')}`,
             alt: 'Anteprima yoox.it',
