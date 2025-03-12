@@ -47,7 +47,7 @@ function SkillsSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <h2 className="text-3xl font-bold mb-2">Skills e competenze</h2>
+            <h2 className="text-3xl font-bold mb-2">Skills e Competenze Tecniche: Sviluppo Web & Cloud Computing</h2>
             <hr className="mb-6 h-[6px] bg-blue-400 w-32" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-gray-900">
                 {skills.map((skill, index) => (

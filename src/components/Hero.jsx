@@ -31,7 +31,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-            Con 8 anni di esperienza, creo soluzioni web innovative e scalabili per potenziare la presenza digitale di startup e aziende.
+            Full Stack Developer e AWS Cloud Developer certificato con 8+ anni di esperienza. Sviluppo soluzioni web innovative, scalabili e ad alte prestazioni con ReactJS, VueJS e NodeJS per startup e aziende che vogliono eccellere nel digitale.
             </motion.p>
             
             <motion.div
@@ -67,7 +67,7 @@ const HeroSection = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-blue-300 rounded-full blur opacity-70"></div>
               <img 
                 src={require("../assets/profile.jpg")} 
-                alt="Matteo Santoro" 
+                alt="Matteo Santoro - Full Stack Developer e AWS Cloud Expert" 
                 className="relative w-64 h-64 object-cover rounded-full border-4 border-white shadow-xl"
               />
             </div>

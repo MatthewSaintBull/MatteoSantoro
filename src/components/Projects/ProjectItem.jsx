@@ -17,6 +17,7 @@ const ProjectItem = ({ image, alt, title, href }) => {
             src={image}
             alt={alt}
             className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
           />
           
           {/* Gradient overlay */}

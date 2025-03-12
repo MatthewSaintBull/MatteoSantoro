@@ -6,55 +6,55 @@ function ProjectsSection() {
         {
             href: 'https://prismaservices.it',
             image: `${require('../../assets/prismaservices-preview.webp')}`,
-            alt: 'Anteprima prismaservices.it',
+            alt: 'Prisma Services - Azienda di sviluppo web e soluzioni IT personalizzate co-fondata da Matteo Santoro',
             title: 'Co-Founder | Prismaservices.it (Owner)'
         },
         {
             href: 'https://formilio.com',
             image: `${require('../../assets/formilio-preview.webp')}`,
-            alt: 'Anteprima formilio.com',
+            alt: 'Formilio - Piattaforma all-in-one per creazione moduli, raccolta lead e gestione newsletter sviluppata da Matteo Santoro',
             title: 'Owner | Formilio.com (Owner)'
         },
         {
             href: 'https://leroymerlin.it',
             image: `${require('../../assets/leroymerlin-preview.webp')}`,
-            alt: 'Anteprima leroymerlin.it',
+            alt: 'Leroy Merlin - Progetti di simulazione efficienza, applicazioni interne e digital signage sviluppati da Matteo Santoro',
             title: 'Efficiency Simulator - Internal projects - Digital Signage | Leroymerlin.it (Consultant)'
         },
         {
             href: 'https://www.yoox.com',
             image: `${require('../../assets/yoox-preview.webp')}`,
-            alt: 'Anteprima yoox.it',
+            alt: 'Yoox - Sviluppo di campagne speciali e soluzioni e-commerce avanzate implementate da Matteo Santoro',
             title: 'Special Campaigns | Yoox.it (employee)'
         },
         {
             href: 'https://www.enel.it',
             image: `${require('../../assets/enel-preview.webp')}`,
-            alt: 'Anteprima enel.it',
+            alt: 'Enel - Web application per la gestione reclami sviluppata da Matteo Santoro come consulente',
             title: 'WebApp Gestione Reclami | enel.it (Consultant)'
         },
         {
             href: 'https://www.deghi.it',
             image: `${require('../../assets/deghi-preview.webp')}`,
-            alt: 'Anteprima deghi.it',
+            alt: 'Deghi - Piattaforma e-commerce ottimizzata e sviluppata con tecnologie moderne da Matteo Santoro',
             title: 'E-commerce | Deghi.it (external)'
         },
         {
             href: 'https://www.doveconviene.it',
             image: `${require('../../assets/doveconviene-preview.webp')}`,
-            alt: 'Anteprima doveconviene.it',
+            alt: 'DoveConviene (ShopFully) - Sistema di gestione campagne pubblicitarie sviluppato da Matteo Santoro',
             title: 'Campaign Manager | doveconviene.it (employee)'
         },
         {
             href: 'https://www.ingenico.com',
             image: `${require('../../assets/ingenico-preview.webp')}`,
-            alt: 'Anteprima ingenico.com',
+            alt: 'Ingenico - Applicazione per la gestione dei ticket sviluppata da Matteo Santoro come consulente',
             title: 'Tickets App | ingenico.com (consultant)'
         },
         {
             href: 'https://www.viveresenzalattosio.it',
             image: `${require('../../assets/viveresenzalattosio-preview.webp')}`,
-            alt: 'Anteprima viveresenzalattosio.it',
+            alt: 'Vivere Senza Lattosio - Blog specializzato sviluppato e gestito da Matteo Santoro con tecnologie web moderne',
             title: 'Blog | Viveresenzalattosio.it (Owner)'
         },
     ]
@@ -65,9 +65,9 @@ function ProjectsSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <h2 className="text-3xl font-bold mb-2">Progetti</h2>
+            <h2 className="text-3xl font-bold mb-2">Portfolio Progetti: Sviluppo Web e Soluzioni Cloud</h2>
             <hr className="mb-6 h-[6px] bg-blue-400 w-32" />
-            <p className="text-gray-700 mb-8">Ecco alcuni dei progetti a cui ho lavorato durante la mia carriera professionale.</p>
+            <p className="text-gray-700 mb-8">Ecco alcuni dei progetti di sviluppo web e cloud computing realizzati durante la mia carriera come Full Stack Developer e AWS Cloud Expert.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map(project => (

@@ -8,7 +8,7 @@ const ContactsSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <h2 className="text-3xl font-bold mb-2">Contatti</h2>
+            <h2 className="text-3xl font-bold mb-2">Contattami per Consulenza Web e Sviluppo Software</h2>
             <hr className="mb-6 h-[6px] bg-blue-400 w-32" />
 
             {/* Two-column layout container */}
@@ -97,7 +97,7 @@ const ContactsSection = () => {
                 {/* Right side: Contact Form */}
                 <div className="w-full md:w-3/5 bg-white p-6 rounded-lg shadow-lg overflow-hidden">
                     <div className="relative w-full h-full min-h-[650px]">
-                        <iframe src="https://www.formilio.com/form/cm83eelnx0001ih0312ctsvpd" width="100%" height="680px" frameborder="0"></iframe>
+                        <iframe src="https://www.formilio.com/form/cm83eelnx0001ih0312ctsvpd" width="100%" height="680px" frameborder="0" title="Modulo di contatto per consulenza sviluppo web e servizi cloud"></iframe>
                     </div>
                 </div>
             </div>
