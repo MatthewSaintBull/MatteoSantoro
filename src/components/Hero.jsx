@@ -31,7 +31,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Sviluppatore Freelancer con oltre 5 anni di esperienza su stack JS
+            Con 8 anni di esperienza, creo soluzioni web innovative e scalabili per potenziare la presenza digitale di startup e aziende.
             </motion.p>
             
             <motion.div

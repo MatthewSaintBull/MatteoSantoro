@@ -16,6 +16,12 @@ function ProjectsSection() {
             title: 'Owner | Formilio.com (Owner)'
         },
         {
+            href: 'https://leroymerlin.it',
+            image: `${require('../../assets/leroymerlin-preview.webp')}`,
+            alt: 'Anteprima leroymerlin.it',
+            title: 'Efficiency Simulator - Internal projects - Digital Signage | Leroymerlin.it (Consultant)'
+        },
+        {
             href: 'https://www.yoox.com',
             image: `${require('../../assets/yoox-preview.webp')}`,
             alt: 'Anteprima yoox.it',

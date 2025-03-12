@@ -23,18 +23,18 @@ const SkillItem = ({ title, description }) => {
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                                {description}
-                            </p>
+                            <p 
+                                className="text-gray-700 leading-relaxed whitespace-pre-line"
+                                dangerouslySetInnerHTML={{ __html: description }}
+                            />
                         </motion.div>
                     ) : (
                         <motion.p 
                             className="text-gray-700 leading-relaxed line-clamp-2"
                             initial={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                        >
-                            {description.split(".")[0]}.
-                        </motion.p>
+                            dangerouslySetInnerHTML={{ __html: description.split(".")[0] + "." }}
+                        />
                     )}
                 </AnimatePresence>
             </div>
