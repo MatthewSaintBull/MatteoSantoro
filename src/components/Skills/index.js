@@ -1,4 +1,5 @@
 import SkillItem from "./SkillItem";
+import { motion } from "framer-motion";
 
 function SkillsSection() {
 
@@ -62,19 +63,28 @@ function SkillsSection() {
     ]
 
     return (
-        <div className='mb-8 '>
+        <motion.div 
+            className='mb-8'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <h2 className="text-3xl font-bold mb-2">Skills e competenze</h2>
-            <hr className="mb-2 h-[6px] bg-blue-400 w-32" />
+            <hr className="mb-6 h-[6px] bg-blue-400 w-32" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-gray-900">
-                {
-                    skills.map(skill => {
-                        return <div className="flex flex-col" key={skill.title}>
-                            <SkillItem title={skill.title} description={skill.description} />
-                        </div>
-                    })
-                }
+                {skills.map((skill, index) => (
+                    <motion.div 
+                        className="flex flex-col" 
+                        key={skill.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                        <SkillItem title={skill.title} description={skill.description} />
+                    </motion.div>
+                ))}
             </div>
-        </div>
+        </motion.div>
     );
 }
 
