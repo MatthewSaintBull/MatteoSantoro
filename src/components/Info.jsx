@@ -22,6 +22,16 @@ const InfoSection = () => {
                         con un'esperienza di oltre 5 anni come programmatore web per aziende di fama internazionale come Yoox Net-A-Porter, Shopfully e Valassis.
                     </p>
                     
+                    <p className='text-gray-700 leading-relaxed mb-4'>
+                        Nel mio percorso professionale, ho co-fondato <span className="font-semibold text-blue-700"><a href="https://prismaservices.it" target="_blank">Prisma SRL</a></span>, un'azienda specializzata nella fornitura di soluzioni informatiche su misura per le imprese. 
+                        Offriamo una vasta gamma di servizi, tra cui sviluppo di applicazioni mobili, creazione di siti web e applicazioni, software aziendali personalizzati, soluzioni cloud e consulenza tecnologica.
+                    </p>
+                    
+                    <p className='text-gray-700 leading-relaxed mb-4'>
+                        Inoltre, ho sviluppato <span className="font-semibold text-blue-700"><a href="https://formilio.com" target="_blank">Formilio</a></span>, una piattaforma all-in-one che unifica la creazione di moduli, la raccolta di lead e la gestione delle newsletter per sviluppatori e proprietari di siti web che gestiscono più proprietà web. 
+                        Formilio consente di creare moduli una sola volta e distribuirli su tutti i siti web, gestire centralmente moduli, lead e newsletter, e integrare il marketing via email senza dover passare da uno strumento all'altro.
+                    </p>
+                    
                     <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
                         <p className="text-blue-800 font-medium">
                             Il mio stack tecnologico comprende le migliori tecnologie del momento, dal frontend al backend.
