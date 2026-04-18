@@ -1,6 +1,20 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const ContactsSection = () => {
+    useEffect(() => {
+        const scriptId = "hubspot-form-script-148295403";
+
+        if (!document.getElementById(scriptId)) {
+            const script = document.createElement("script");
+            script.id = scriptId;
+            script.src = "https://js-eu1.hsforms.net/forms/embed/148295403.js";
+            script.defer = true;
+            script.async = true;
+            document.body.appendChild(script);
+        }
+    }, []);
+
     return (
         <motion.div
             className='container mx-auto'
@@ -95,10 +109,13 @@ const ContactsSection = () => {
                 </div>
 
                 {/* Right side: Contact Form */}
-                <div className="w-full md:w-3/5 bg-white p-6 rounded-lg shadow-lg overflow-hidden">
-                    <div className="relative w-full h-full min-h-[650px]">
-                        <iframe src="https://www.formilio.com/form/cm83eelnx0001ih0312ctsvpd" width="100%" height="680px" frameborder="0" title="Modulo di contatto per consulenza sviluppo web e servizi cloud"></iframe>
-                    </div>
+                <div className="w-full md:w-3/5 bg-white p-8 rounded-lg shadow-lg">
+                    <div
+                        className="hs-form-frame"
+                        data-region="eu1"
+                        data-form-id="48798398-1cc7-4520-b52a-8368ecbef396"
+                        data-portal-id="148295403"
+                    ></div>
                 </div>
             </div>
         </motion.div>

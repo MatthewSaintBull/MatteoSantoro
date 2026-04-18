@@ -10,10 +10,10 @@ function ProjectsSection() {
             title: 'Co-Founder | Prismaservices.it (Owner)'
         },
         {
-            href: 'https://formilio.com',
-            image: `${require('../../assets/formilio-preview.webp')}`,
-            alt: 'Formilio - Piattaforma all-in-one per creazione moduli, raccolta lead e gestione newsletter sviluppata da Matteo Santoro',
-            title: 'Owner | Formilio.com (Owner)'
+            href: 'https://contoflux.it',
+            image: `${require('../../assets/contoflux-preview.webp')}`,
+            alt: 'Gestisci spese, entrate, budget e patrimonio in un\'unica app italiana',
+            title: 'Owner | Contoflux.it (Owner)'
         },
         {
             href: 'https://leroymerlin.it',
