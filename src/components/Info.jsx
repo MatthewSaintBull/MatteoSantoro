@@ -25,7 +25,7 @@ const InfoSection = () => {
                     </p>
 
                     <p className='text-gray-700 leading-relaxed mb-4'>
-                        Inoltre, ho sviluppato <span className="font-semibold text-blue-700"><a href="https://formilio.com" target="_blank">Formilio</a></span>, una piattaforma all-in-one che unifica la creazione di moduli, la raccolta di lead e la gestione delle newsletter per sviluppatori e proprietari di siti web con più domini. Formilio permette di creare moduli una sola volta e distribuirli su tutti i siti, gestire centralmente moduli, lead e newsletter, e integrare il marketing via email senza dover utilizzare strumenti diversi.
+                        Inoltre, ho sviluppato e gestisco <span className="font-semibold text-blue-700"><a href="https://contoflux.it" target="_blank">Contoflux.it</a></span>, un'app italiana all-in-one per la gestione di spese, entrate, budget e patrimonio, progettata per semplificare la vita finanziaria degli utenti con un'interfaccia intuitiva e funzionalità avanzate.
                     </p>
                     <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
                         <p className="text-blue-800 font-medium">
