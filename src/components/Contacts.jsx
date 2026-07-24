@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 const ContactsSection = () => {
     useEffect(() => {
@@ -16,110 +16,57 @@ const ContactsSection = () => {
     }, []);
 
     return (
-        <motion.div
-            className='container mx-auto'
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-        >
-            <h2 className="text-3xl font-bold mb-2">Contattami per Consulenza Web e Sviluppo Software</h2>
-            <hr className="mb-6 h-[6px] bg-blue-400 w-32" />
+        <section className="container-page">
+            <Reveal>
+                <header className="head-hang">
+                    <h2 className="display">Contattami</h2>
+                    <p>Raccontami il progetto in due righe: ti rispondo con domande concrete, non con una brochure.</p>
+                </header>
 
-            {/* Two-column layout container */}
-            <div className="flex flex-col md:flex-row gap-8">
-                {/* Left side: Contact information */}
-                <div className="w-full md:w-2/5 bg-white p-8 rounded-lg shadow-lg">
-                    <div className="mb-8">
-                        <h3 className="text-xl font-bold text-blue-800 mb-3">Email</h3>
-                        <div className="flex items-center text-gray-700">
-                            <i className="far fa-envelope text-blue-500 mr-3 text-xl"></i>
-                            <a href="mailto:admin@msantoro.com" className="hover:text-blue-600 transition-colors duration-300">admin@msantoro.com</a>
+                <div className="contact">
+                    <dl className="channels link-list">
+                        <div>
+                            <dt className="label-mono">Email</dt>
+                            <dd><a href="mailto:admin@msantoro.com">admin@msantoro.com</a></dd>
                         </div>
-                    </div>
-
-                    <div className="mb-8">
-                        <h3 className="text-xl font-bold text-blue-800 mb-3">Telefono</h3>
-                        <div className="flex items-center text-gray-700">
-                            <i className="fas fa-phone-alt text-blue-500 mr-3 text-xl"></i>
-                            <a href="tel:+393337360501" className="hover:text-blue-600 transition-colors duration-300">+39 333 736 0501</a>
+                        <div>
+                            <dt className="label-mono">Telefono</dt>
+                            <dd><a href="tel:+393337360501">+39 333 736 0501</a></dd>
                         </div>
-                    </div>
+                        <div>
+                            <dt className="label-mono">Curriculum</dt>
+                            <dd>
+                                <a href={require('../assets/CV.pdf')} target="_blank" rel="noopener noreferrer">
+                                    Scarica il CV (PDF)
+                                </a>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt className="label-mono">Social</dt>
+                            <dd>
+                                <a href="https://github.com/MatthewSaintbull" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                {" · "}
+                                <a href="https://www.linkedin.com/in/matteo-santoro/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                {" · "}
+                                <a href="https://www.instagram.com/matteo_santoro_97/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                {" · "}
+                                <a href="https://medium.com/@mttdev1997" target="_blank" rel="noopener noreferrer">Medium</a>
+                            </dd>
+                        </div>
+                    </dl>
 
-                    <div className="mb-8">
-                        <h3 className="text-xl font-bold text-blue-800 mb-3">Curriculum</h3>
-                        <a
-                            href={require('../assets/CV.pdf')}
-                            target="_blank"
-                            className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
-                        >
-                            <i className="fas fa-file-pdf text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
-                            Scarica il mio curriculum
-                        </a>
-                    </div>
-
-                    <div className="mb-4">
-                        <h3 className="text-xl font-bold text-blue-800 mb-3">Social</h3>
-                        <ul className="grid grid-cols-2 gap-4">
-                            <li>
-                                <a
-                                    href="https://github.com/MatthewSaintbull"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
-                                >
-                                    <i className="fab fa-github text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
-                                    Github
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.linkedin.com/in/matteo-santoro/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
-                                >
-                                    <i className="fab fa-linkedin text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
-                                    LinkedIn
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.instagram.com/matteo_santoro_97/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
-                                >
-                                    <i className="fab fa-instagram text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://medium.com/@mttdev1997"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300 group"
-                                >
-                                    <i className="fab fa-medium text-blue-500 mr-3 text-xl group-hover:scale-110 transition-transform duration-300"></i>
-                                    Medium
-                                </a>
-                            </li>
-                        </ul>
+                    <div className="form-card">
+                        <div
+                            className="hs-form-frame"
+                            data-region="eu1"
+                            data-form-id="48798398-1cc7-4520-b52a-8368ecbef396"
+                            data-portal-id="148295403"
+                        ></div>
                     </div>
                 </div>
-
-                {/* Right side: Contact Form */}
-                <div className="w-full md:w-3/5 bg-white p-8 rounded-lg shadow-lg">
-                    <div
-                        className="hs-form-frame"
-                        data-region="eu1"
-                        data-form-id="48798398-1cc7-4520-b52a-8368ecbef396"
-                        data-portal-id="148295403"
-                    ></div>
-                </div>
-            </div>
-        </motion.div>
+            </Reveal>
+        </section>
     );
-}
+};
 
 export default ContactsSection;

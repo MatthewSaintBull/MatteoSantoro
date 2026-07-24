@@ -1,5 +1,5 @@
 import ProjectItem from './ProjectItem';
-import { motion } from 'framer-motion';
+import Reveal from '../Reveal';
 
 function ProjectsSection() {
     const projects = [
@@ -7,80 +7,98 @@ function ProjectsSection() {
             href: 'https://prismaservices.it',
             image: `${require('../../assets/prismaservices-preview.webp')}`,
             alt: 'Prisma Services - Azienda di sviluppo web e soluzioni IT personalizzate co-fondata da Matteo Santoro',
-            title: 'Co-Founder | Prismaservices.it (Owner)'
+            name: 'Prisma Services',
+            role: 'Co-founder',
+            detail: 'Soluzioni IT su misura per le imprese',
         },
         {
             href: 'https://contoflux.it',
             image: `${require('../../assets/contoflux-preview.webp')}`,
-            alt: 'Gestisci spese, entrate, budget e patrimonio in un\'unica app italiana',
-            title: 'Owner | Contoflux.it (Owner)'
+            alt: 'Contoflux - Gestisci spese, entrate, budget e patrimonio in un\'unica app italiana',
+            name: 'Contoflux',
+            role: 'Founder',
+            detail: 'Spese, budget e patrimonio in un\'unica app',
         },
         {
             href: 'https://leroymerlin.it',
             image: `${require('../../assets/leroymerlin-preview.webp')}`,
             alt: 'Leroy Merlin - Progetti di simulazione efficienza, applicazioni interne e digital signage sviluppati da Matteo Santoro',
-            title: 'Efficiency Simulator - Internal projects - Digital Signage | Leroymerlin.it (Consultant)'
+            name: 'Leroy Merlin',
+            role: 'Consulente',
+            detail: 'Efficiency simulator, digital signage e tool interni',
         },
         {
             href: 'https://www.yoox.com',
             image: `${require('../../assets/yoox-preview.webp')}`,
             alt: 'Yoox - Sviluppo di campagne speciali e soluzioni e-commerce avanzate implementate da Matteo Santoro',
-            title: 'Special Campaigns | Yoox.it (employee)'
+            name: 'Yoox',
+            role: 'Dipendente',
+            detail: 'Campagne speciali per l\'e-commerce',
         },
         {
             href: 'https://www.enel.it',
             image: `${require('../../assets/enel-preview.webp')}`,
             alt: 'Enel - Web application per la gestione reclami sviluppata da Matteo Santoro come consulente',
-            title: 'WebApp Gestione Reclami | enel.it (Consultant)'
+            name: 'Enel',
+            role: 'Consulente',
+            detail: 'Web app per la gestione dei reclami',
         },
         {
             href: 'https://www.deghi.it',
             image: `${require('../../assets/deghi-preview.webp')}`,
             alt: 'Deghi - Piattaforma e-commerce ottimizzata e sviluppata con tecnologie moderne da Matteo Santoro',
-            title: 'E-commerce | Deghi.it (external)'
+            name: 'Deghi',
+            role: 'Esterno',
+            detail: 'Piattaforma e-commerce',
         },
         {
             href: 'https://www.doveconviene.it',
             image: `${require('../../assets/doveconviene-preview.webp')}`,
             alt: 'DoveConviene (ShopFully) - Sistema di gestione campagne pubblicitarie sviluppato da Matteo Santoro',
-            title: 'Campaign Manager | doveconviene.it (employee)'
+            name: 'DoveConviene · ShopFully',
+            role: 'Dipendente',
+            detail: 'Campaign manager pubblicitario',
         },
         {
             href: 'https://www.ingenico.com',
             image: `${require('../../assets/ingenico-preview.webp')}`,
             alt: 'Ingenico - Applicazione per la gestione dei ticket sviluppata da Matteo Santoro come consulente',
-            title: 'Tickets App | ingenico.com (consultant)'
+            name: 'Ingenico',
+            role: 'Consulente',
+            detail: 'App per la gestione dei ticket',
         },
         {
             href: 'https://www.viveresenzalattosio.it',
             image: `${require('../../assets/viveresenzalattosio-preview.webp')}`,
             alt: 'Vivere Senza Lattosio - Blog specializzato sviluppato e gestito da Matteo Santoro con tecnologie web moderne',
-            title: 'Blog | Viveresenzalattosio.it (Owner)'
+            name: 'Vivere Senza Lattosio',
+            role: 'Founder',
+            detail: 'Blog specializzato',
         },
-    ]
+    ];
+
     return (
-        <motion.div 
-            className='container mx-auto'
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-        >
-            <h2 className="text-3xl font-bold mb-2">Portfolio Progetti: Sviluppo Web e Soluzioni Cloud</h2>
-            <hr className="mb-6 h-[6px] bg-blue-400 w-32" />
-            <p className="text-gray-700 mb-8">Ecco alcuni dei progetti di sviluppo web e cloud computing realizzati durante la mia carriera come Full Stack Developer e AWS Cloud Expert.</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map(project => (
-                    <ProjectItem 
-                        key={project.title} 
-                        image={project.image} 
-                        alt={project.alt} 
-                        title={project.title} 
-                        href={project.href} 
-                    />
-                ))}
-            </div>
-        </motion.div>
+        <section className="container-page">
+            <Reveal>
+                <header className="head-hang">
+                    <h2 className="display">Progetti</h2>
+                    <p>Nove progetti, otto anni, un filo conduttore: codice in produzione.</p>
+                </header>
+                <div className="projects-grid">
+                    {projects.map(project => (
+                        <ProjectItem
+                            key={project.name}
+                            image={project.image}
+                            alt={project.alt}
+                            name={project.name}
+                            role={project.role}
+                            detail={project.detail}
+                            href={project.href}
+                        />
+                    ))}
+                </div>
+            </Reveal>
+        </section>
     );
 }
 

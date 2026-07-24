@@ -5,23 +5,25 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        'fade-in': 'fade-in 0.3s ease-out',
-        'fade-out': 'fade-out 0.3s ease-out',
-      },
-      keyframes: {
-        'fade-in': {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
-        },
-        'fade-out': {
-          from: { opacity: 1 },
-          to: { opacity: 0 },
-        },
-      },
+      // I valori vivono in tokens.css (OKLCH) — qui solo il wiring per le utility.
       colors: {
-        'pastel-blue' : '#A7C7E7'
-      }
+        paper: 'var(--color-paper)',
+        'paper-2': 'var(--color-paper-2)',
+        ink: 'var(--color-ink)',
+        'ink-2': 'var(--color-ink-2)',
+        muted: 'var(--color-muted)',
+        rule: 'var(--color-rule)',
+        'rule-2': 'var(--color-rule-2)',
+        accent: 'var(--color-accent)',
+        'accent-deep': 'var(--color-accent-deep)',
+        'accent-ink': 'var(--color-accent-ink)',
+        graphite: 'var(--color-graphite)',
+      },
+      fontFamily: {
+        display: 'var(--font-display)',
+        body: 'var(--font-body)',
+        mono: 'var(--font-mono)',
+      },
     },
   },
   plugins: [],

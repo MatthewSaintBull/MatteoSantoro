@@ -1,80 +1,107 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+
+const REQUEST_LINE = "GET /api/matteo-santoro";
+const EASE = [0.16, 1, 0.3, 1];
+
+// La prova del dittico: una risposta API con i fatti veri. Nessuna chrome finta —
+// cornice tipografica: riga di richiesta + chip di stato + corpo JSON.
+const CodeCard = () => {
+  const [typed, setTyped] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setTyped(REQUEST_LINE);
+      setDone(true);
+      return;
+    }
+    let i = 0;
+    const timer = setInterval(() => {
+      i += 1;
+      setTyped(REQUEST_LINE.slice(0, i));
+      if (i >= REQUEST_LINE.length) {
+        clearInterval(timer);
+        setTimeout(() => setDone(true), 250);
+      }
+    }, 40);
+    return () => clearInterval(timer);
+  }, []);
+
+  const [method, ...path] = typed.split(" ");
+
+  return (
+    <figure className="code-card" aria-label="Risposta API con il profilo di Matteo Santoro">
+      <div className="code-card__bar">
+        <span className="code-card__req">
+          <span className="tok-method">{method}</span>
+          {path.length > 0 && <span> {path.join(" ")}</span>}
+          {!done && <span className="code-caret" aria-hidden="true" />}
+        </span>
+        {done && <span className="status-chip">200 OK</span>}
+      </div>
+      <pre className={`code-card__body${done ? " is-in" : ""}`}>
+        <code>
+          <span className="tok-punc">{"{"}</span>{"\n"}
+          {"  "}<span className="tok-key">"nome"</span><span className="tok-punc">: </span><span className="tok-str">"Matteo Santoro"</span><span className="tok-punc">,</span>{"\n"}
+          {"  "}<span className="tok-key">"ruolo"</span><span className="tok-punc">: </span><span className="tok-str">"Full Stack Developer"</span><span className="tok-punc">,</span>{"\n"}
+          {"  "}<span className="tok-key">"esperienza"</span><span className="tok-punc">: </span><span className="tok-str">"8+ anni"</span><span className="tok-punc">,</span>{"\n"}
+          {"  "}<span className="tok-key">"stack"</span><span className="tok-punc">: [</span><span className="tok-str">"React"</span><span className="tok-punc">, </span><span className="tok-str">"Vue"</span><span className="tok-punc">, </span><span className="tok-str">"Node"</span><span className="tok-punc">, </span><span className="tok-str">"AWS"</span><span className="tok-punc">],</span>{"\n"}
+          {"  "}<span className="tok-key">"certificazione"</span><span className="tok-punc">: </span><span className="tok-str">"AWS Developer Associate"</span><span className="tok-punc">,</span>{"\n"}
+          {"  "}<span className="tok-key">"disponibile"</span><span className="tok-punc">: </span><span className="tok-key">true</span>{"\n"}
+          <span className="tok-punc">{"}"}</span>
+        </code>
+      </pre>
+    </figure>
+  );
+};
 
 const HeroSection = () => {
+  const reduced = useReducedMotion();
+  const enter = (delay) => ({
+    initial: reduced ? false : { opacity: 0, y: 10 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, delay, ease: EASE },
+  });
+
   return (
-    <div className="relative bg-gradient-to-r from-blue-900 to-blue-700 py-16 md:py-24">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{ 
-          backgroundImage: "url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220 0 60 60%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%23ffffff%22 fill-opacity%3D%221%22%3E%3Cpath d%3D%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')",
-          backgroundSize: "24px 24px" 
-        }}
-        ></div>
-      </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          {/* Left side with text */}
-          <div className="w-full md:w-3/5 text-center md:text-left mb-8 md:mb-0">
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Ciao, sono <span className="text-blue-300">Matteo Santoro</span>
-            </motion.h1>
-            
-            <motion.p 
-              className="text-xl md:text-2xl text-blue-100 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-            Full Stack Developer e AWS Cloud Developer certificato con 8+ anni di esperienza. Sviluppo soluzioni web innovative, scalabili e ad alte prestazioni con ReactJS, VueJS e NodeJS per startup e aziende che vogliono eccellere nel digitale.
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <a 
-                href="https://github.com/MatthewSaintbull" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-50 transition duration-300 mr-4 mb-4 md:mb-0"
-              >
-                <i className="fab fa-github mr-2"></i> GitHub
-              </a>
-              <a 
-                href="#contacts" 
-                className="inline-block bg-transparent text-white border-2 border-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-700 transition duration-300"
-              >
-                Contattami
-              </a>
-            </motion.div>
-          </div>
-          
-          {/* Right side with profile image */}
-          <motion.div 
-            className="w-full md:w-2/5 flex justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-blue-300 rounded-full blur opacity-70"></div>
-              <img 
-                src={require("../assets/profile.jpg")} 
-                alt="Matteo Santoro - Full Stack Developer e AWS Cloud Expert" 
-                className="relative w-64 h-64 object-cover rounded-full border-4 border-white shadow-xl"
-              />
-            </div>
+    <section className="container-page">
+      <div className="hero">
+        <div>
+          <motion.h1 className="hero__title display" {...enter(0)}>
+            Sviluppo web solido, dal frontend al cloud.
+          </motion.h1>
+          <motion.p className="hero__lede" {...enter(0.08)}>
+            Sono Matteo Santoro, Full Stack Developer con certificazione AWS e più di
+            otto anni di esperienza. Costruisco applicazioni React, Vue e Node che
+            reggono il traffico reale, per startup e aziende come Yoox, Leroy Merlin
+            ed Enel.
+          </motion.p>
+          <motion.div className="hero__actions" {...enter(0.16)}>
+            <a className="btn btn--primary" href="#contacts">Parliamo del tuo progetto</a>
+            <a className="cta-link" href="#projects">Vedi i progetti</a>
           </motion.div>
         </div>
+        <motion.div {...enter(0.1)}>
+          <CodeCard />
+        </motion.div>
       </div>
-    </div>
+
+      <div className="clients">
+        <ul className="clients__inner">
+          <li className="clients__lead label-mono" aria-label="Aziende per cui ho lavorato">
+            Ho scritto codice per
+          </li>
+          <li>Yoox Net-a-Porter</li>
+          <li>ShopFully</li>
+          <li>Leroy Merlin</li>
+          <li>Enel</li>
+          <li>Deghi</li>
+          <li>Ingenico</li>
+          <li>Vericast</li>
+        </ul>
+      </div>
+    </section>
   );
 };
 
