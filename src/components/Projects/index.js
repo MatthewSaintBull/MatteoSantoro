@@ -20,6 +20,14 @@ function ProjectsSection() {
             detail: 'Spese, budget e patrimonio in un\'unica app',
         },
         {
+            href: 'https://freenapse.app',
+            image: `${require('../../assets/freenapse-preview.webp')}`,
+            alt: 'Freenapse - Alternativa open source in Rust a Razer Synapse per configurare un mouse Razer su Windows, sviluppata da Matteo Santoro',
+            name: 'Freenapse',
+            role: 'Open source',
+            detail: 'Configura un mouse Razer senza Synapse',
+        },
+        {
             href: 'https://leroymerlin.it',
             image: `${require('../../assets/leroymerlin-preview.webp')}`,
             alt: 'Leroy Merlin - Progetti di simulazione efficienza, applicazioni interne e digital signage sviluppati da Matteo Santoro',
@@ -82,7 +90,7 @@ function ProjectsSection() {
             <Reveal>
                 <header className="head-hang">
                     <h2 className="display">Progetti</h2>
-                    <p>Nove progetti, otto anni, un filo conduttore: codice in produzione.</p>
+                    <p>Dieci progetti, otto anni, un filo conduttore: codice in produzione.</p>
                 </header>
                 <div className="projects-grid">
                     {projects.map(project => (
